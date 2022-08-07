@@ -1,0 +1,118 @@
+<!--                           LISTAS                           -->
+
+<!--Existen 3 tipos de listas:
+
+1- Listas Ordenadas
+2- Listas Desordenadas
+3- Listas de Definición-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+
+<body style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+
+    <!-- 1- Las listas ordenadas son como las listas numeradas de los
+procesadores de texto (ej. Microsoft Word), y son representadas por
+la etiqueta <ol> (ordered list), dentro de la cual cada elemento irá
+dentro de una etiqueta <li> (list item). De querer que la lista
+empiece por otro número, se usa el atributo "start" dentro de la
+etiqueta de apertura de la lista, y se le asigna el valor del número
+inicial deseado:-->
+    <h2>Listas Ordenadas</h2>
+    <h3>Estaciones del año desde el nro. 3</h3>
+    <ol start="3">
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+        <li>Primavera</li>
+    </ol>
+    <!-- Si se quisiera que la lista estuviera invertida, se usa el
+atributo "reversed" en la etiqueta de apertura de la lista
+("reversed" es un atributo booleano, no lleva valor asignado por el
+usuario): -->
+    <h3>Lista Invertida</h3>
+    <ol reversed>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+    </ol>
+    <!-- Si se quisiera que la lista tenga otro tipo de numeración, se
+usa le atributo "type" dentro de la etiqueta de apertura. Posibles
+cambios como valores de "type": "1" (default), "a" (letras en
+minúscula), "A" (letras en mayúscula), "i" (números romanos en
+minúscula), "I" (números romanos en mayúscula). -->
+    <h3>Lista de Letras Mayúsculas</h3>
+    <ol type="A">
+        <li>Letra 1</li>
+        <li>Letra 2</li>
+        <li>Letra 3</li>
+        <li>Letra 4</li>
+    </ol>
+    <h3>Lista de números romanos, invertida, empezando por "10"</h3>
+    <ol reversed type="i" start="10">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <hr>
+    <!-- 2- Las listas desordenadas son como las listas en viñetas de
+los procesadores de texto (ej. listas con puntitos). Son representadas
+por la etiqueta <ul> (unordered list).-->
+    <h2>Listas Desordenadas</h2>
+    <h3>Cosas por hacer...</h3>
+    <ul>
+        <li>Aprender HTML</li>
+        <li>Aprender CSS</li>
+        <li>Aprender JavaScript</li>
+        <li>Aprender Expert y PHP</li>
+    </ul>
+    <!-- Si se quisiera cambian el tipo de viñeta con la que son
+indexados los items de la lista desordenada, se usa el atributo "type"
+seguido del valor correspondiente a la viñeta. Por defecto, el valor
+es "disc" que corresponde a los puntitos, pero las viñetas también
+pueden ser círculos sin relleno, o cuadrados rellenos.-->
+    <h3>Viñetas cuadradas</h3>
+    <ul type="square">
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    <h3>Viñetas circulares</h3>
+    <ul type="circle">
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <hr>
+    <!-- 3- Las listas de definición son las menos utilizadas en la
+web, y generalmente aplicadas para glosarios y otras aplicaciones
+similares. Son representadas por la etiqueta <dl> (definition list),
+y en lugar de utilizarse la etiqueta "li" correspondiente a "list
+item", se utilizan las siguientes etiquetas: <dt> (definition term,
+término que va a ser definido), y <dd> (definition data, explicación
+del término a definir).-->
+    <h2>Listas de Definición</h2>
+    <h3>Glosario de Lenguajes</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado para páginas web.</dd>
+        <dt>CSS</dt>
+        <dd>Lenguaje de definición que da estilos al código html.</dd>
+        <dt>JavaScript</dt>
+        <dd>Lenguaje de programación Frontend web.</dd>
+    </dl>
+
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

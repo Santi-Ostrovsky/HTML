@@ -1,0 +1,61 @@
+<!--                     INTRODUCIR IMÁGENES                    -->
+
+<!-- Para introducir imágenes en un documento HTML, se utiliza la
+etiqueta <img>, con dos atributos principales: "src" (source) y
+"alt" (alternative text description, texto que se muestra si la
+imagen está rota o el navegador no puede mostrarla). Es importante
+que las imágenes siempre lleven una descripción alternativa, ya que
+los screen-readers escanean la página en búsqueda de esos nombres,
+tanto para los buscadores como para describir el contenido para las
+personas no videntes.
+
+Otro atributo que puede tener la etiqueta -img- es "srcset"
+(screen-set), el cual toma una ruta relativa de la imagen y un valor
+que le empareje el tamaño o la densidad de pixeles a la imagen para
+adaptarla a distintos tipos de pantallas o modos de reproducción.
+
+Ej: <img src="/images/sunset-@2x.jpg 2x", siendo "sunset.jpg" el
+nombre del archivo, se utiliza para duplicar la cantidad de pixeles
+y llevar una imagen a la resolución 720px de ancho.
+
+Ej-2: <img src="/images/sunset-720.jpg 720w">. En este caso, se usa
+un descriptor de ancho, que se va a dividir por uno de los tamaños
+ingresados en el atributo "sizes", para obtener la densidad de pixeles
+apropiada, dependiendo del navegador y de la plataforma desde la que
+se esté ingresando a la página web.
+
+En todos los casos, la resolución óptima de la imagen será decidida
+por el navegador al momento de cargar la página, en combinación con
+los valores pasados dentro de los atributos "width" y "height" (si es
+que son utilizados). De todos modos, estas cosas, en términos de
+estilo, es mejor definirlas en los archivos CSS, lo que normalmente
+se hace definiendo un valor predeterminado de la siguiente manera:
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+Los formatos soportados por la etiqueta -img- suelen ser los
+normalmente soportados por los navegadores, tales como jpg, png, gif,
+svg, etc... (formato svg hace referencia a vectores -logos-, que son
+código representando una imagen comercial. Usar Inkscape). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes</title>
+</head>
+
+<body>
+    <img src="/HTML/Html_Css_Practice/HTML_Periodic_Table.png" alt="Tabla periódica de los elementos HTML" width=100%
+        height=auto>
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

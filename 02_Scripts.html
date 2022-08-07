@@ -1,0 +1,34 @@
+<!--                   COMO INVOCAR CÓDIGO JS                   -->
+
+<!-- Para invocar código en HTML, se utiliza una de las siguientes
+dos formas:
+
+1- La etiqueta <script>: Preferentemente, las etiquetas de script
+deben ir antes del cierre de la etiqueta <body> (líneas 26-28).
+
+2- También se utiliza la etiqueta <script>, pero en este caso se hace
+invocando un archivo JS externo (en este caso, del mismo directorio).
+Para hacer esto, en medio de las etiquetas, <script></script> no se
+escribe el código, sino que dentro de la etiqueta de apertura se
+escribe la palabra-clave "src" (source), y a ese atributo se le da
+como valor, la ruta del archivo JS (línea 29).      -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts</title>
+</head>
+
+<body>
+    <script>
+        console.log('Esto es un script JS en un documento HTML.');
+    </script>
+    <script src="/HTML/Html_Css_Practice/assets/codigo.js"></script>
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

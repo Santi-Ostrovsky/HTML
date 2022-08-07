@@ -1,0 +1,100 @@
+<!--                   ELEMENTOS INTERACTIVOS                   -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Multimedia</title>
+    <meta name="description" content="Elementos Multimedia">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="font-family: sans-serif;">
+    <h1>AUDIO Y VIDEO</h1>
+
+    <hr>
+
+    <!-- Para introducir un archivo de audio en un documento html,
+    se usa la etiqueta <audio>, pero no basta por si sola. El
+    archivo de audio como tal no es visible, por lo tanto se le
+    debe agregar un atributo booleano a la etiqueta, llamado
+    "controls". -->
+    <h2>Audio</h2>
+
+    <h3>Canción</h3>
+    <audio src="media/Enough - NEFFEX.mp3" controls>Canción</audio>
+
+    <br><br>
+
+    <!-- Otro atributo que se le puede dar a la etiqueta "audio",
+    es la de reproducción automática → "autoplay". Generalmente no
+    es buena idea aplicar este atributo, no sólo porque es mejor
+    que el usuario interactúe únicamente con el contenido que él
+    desee, sino que en algunos navegadores y en dispositivos
+    móviles, el usuario tiene que dar permisos de aplicación para
+    que este atributo tenga efecto, por lo que mayormente queda
+    sin uso. -->
+    <h3>Pedo + autoplay</h3>
+    <audio src="media/Long Fart.mp3" controls autoplay>Fart</audio>
+
+    <br><br>
+
+    <!-- Otro atributo es el "muted", que va a reproducir el
+    contenido sin audio por defecto, y el usuario tiene que activar
+    el mismo, manualmente. -->
+    <h3>Truenos + muted</h3>
+    <audio src="media/Thunder Crack.mp3" controls muted>Fart</audio>
+
+    <br><br>
+    <hr>
+
+    <!-- Para introducir un archivo de video en un documento html,
+    se usa la etiqueta <video>. De igual manera, es necesario que
+    se utilize el atributo "controls" para poder controlar el
+    reproductor de video en la web, y así dar "play" al video,
+    pausarlo, adelantarlo, etc. -->
+    <h2>Video</h2>
+
+    <h3>Godzilla vs. Kong</h3>
+    <video src="media/kongvszilla.mp4" controls>GodzillaVsKong</video>
+
+    <br><br>
+
+    <!-- Otro atributo es el <loop>, que sirve para que el contenido
+    se reproduzca nuevamente de forma automática cuando termina de
+    reproducirse por primera vez, y seguirá repitiéndose hasta que
+    el usuario detenga manualmente la reproducción. -->
+    <h3>Kid + Loop</h3>
+    <video src="media/AtzoIfZ_DThyd4miZW4VB_ZrqHoZbO_GR3_ZW8Etn16P.mp4" controls loop>I will always love you kid</video>
+
+    <br><br>
+
+    <!-- Otro atributo es el <preload>, que sirve para que el
+    contenido multimedia se cargue en el cache del navegador
+    mientras que se carga la página, aunque el usuario no haya
+    iniciado la reproducción del mismo. No lleva valor: -->
+    <h3>Xmas song + preload</h3>
+    <video src="media/christmasSong.mp4" controls preload></video>
+
+    <br><br>
+
+    <!-- Un atributo que existe SOLO para video, es "poster", que
+    permite poner un thumbnail al video, una imagen que se va a 
+    mostrar mientas el video no se reproduzca. Hay que poner una
+    imagen que sea del mismo tamaño que el video para que no pase
+    lo que pasa aca, que la imagen es mas grande y a la hora de 
+    reproducir el mp4 se cambia el tamaño de la página. -->
+    <h3>Godzilla vs. Kong</h3>
+    <video src="media/kongvszilla.mp4" controls preload
+        poster="/HTML/Practice/HTML_Periodic_Table.png">GodzillaVsKong</video>
+
+    <!-- Asi como en las imágenes, en los videos también se puede
+ajustar el tamaño a través de los atributos "max'width" y "height". -->
+
+
+</body>
+
+</html>
+<!-- ---------------------------------------------------------- -->

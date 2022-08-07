@@ -1,0 +1,85 @@
+<!--                   ELEMENTOS INTERACTIVOS                   -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Interactivos</title>
+    <meta name="description" content="Elementos Interactivos">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <h1>Elementos Interactivos</h1>
+
+    <!-- Pueden agregarse elementos interactivos a las páginas, con
+    código JavaScript. Aunque sea una mala práctica personalizar
+    este tipo de elementos desde el documento html y sin entrar en
+    lo que es código JS, estos elementos pueden ser insertados en
+    la página a través de etiquetas como <button>, en la que se
+    podrán determinar atributos, dependiendo de cual sea el
+    comportamiento deseado de dicho botón. -->
+    <h2>Button + "onclick"</h2>
+    <button onclick="alert('Le hiciste \'click\' al botón!')">Dale click al botón...</button>
+
+    <br><br>
+    <hr>
+
+    <!-- Otra etiqueta es la de <details>, que sirve para crear
+    botones en cascada o acordeón. Dentro de la etiqueta, se pone
+    otra llamada <summary>, en donde va el título del botón, y
+    dentro, para el momento de la "apertura" del botón, se pueden
+    poner muchas mas etiquetas: -->
+    <h2>Etiqueta "details"</h2>
+    <details>
+        <summary>Título del botón acordeón</summary>
+        <br>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione sunt rerum et labore ut
+                provident numquam eum cupiditate itaque. Minus molestias magni quisquam eveniet libero impedit
+                voluptatibus alias voluptates.</p>
+            <img src="/HTML/Html_Css_Practice/HTML_Periodic_Table.png" alt="Tabla periódica de los Elementos HTML"
+                width="50%" height="auto">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, itaque. Quam quo praesentium adipisci
+                et. Maxime a quaerat odit rem commodi perferendis laborum nostrum error voluptatem unde! Repellendus,
+                aut numquam.</p>
+        </article>
+    </details>
+
+    <br><br>
+    <hr>
+
+    <!-- Un atributo que se le puede dar a la etiqueta "details",
+    es, por ejemplo, el atributo booleano "open", que va a cargar
+    la página web con el botón abierto de forma automática: -->
+    <h2>Etiqueta "details" abierta</h2>
+    <details open>
+        <summary>Acordeón abierto</summary>
+        <br>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ratione sunt rerum et labore ut
+                provident numquam eum cupiditate itaque. Minus molestias magni quisquam eveniet libero impedit
+                voluptatibus alias voluptates.</p>
+        </article>
+    </details>
+
+    <br><br>
+    <hr>
+
+    <!-- Otro elemento interactivo son las cajas de diálogo o
+    "ventanas modales", lo cual se logra a través de la etiqueta
+    EXPERIMENTAL (todavía no esta bien soportada por todos los
+    navegadores) <dialog>, que por defecto aparece oculta, por lo
+    que se le pasa el atributo "open". -->
+    <h2>Etiqueta "dialog"</h2>
+    <dialog open>
+        Esto es una ventana de diálogo!
+    </dialog>
+
+</body>
+
+</html>
+<!-- ---------------------------------------------------------- -->

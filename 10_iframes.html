@@ -1,0 +1,74 @@
+<!--                          iFRAMES                          -->
+
+<!-- En medida de lo posible, hay que evitar el uso la etiqueta 
+<iframe>, ya que sirve para insertar contenido dentro de los
+documentos html, y lo mejor es hacerlo desde JavaScrip.
+
+Sin embargo, existe como utilidad, y es la de introducir una
+"ventana" dentro de la página, a través de la cual se ve contenido
+de otra página web, por ejemplo (algunos sitios tienen protección
+contra este tipo de etiquetas, por lo que no se van a poder mostrar)
+No es recomendable usar mas un iFrame por documento HTML, porque las
+páginas se hacen muy pesadas y tardan en cargar, debido a que tienen
+que cargar varias páginas de manera simultánea. -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFRAMES</title>
+    <meta name="description" content="iFrames">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="font-family: sans-serif;">
+    <h1>iFRAMES</h1>
+    <hr>
+
+    <br><br>
+
+    <h2>iframe de HTMLreference.io (sin marco) <small>(con width 80% y height 400px)</small></h2>
+
+    <iframe src="https://htmlreference.io" frameborder="0" width="80%" height="400"></iframe>
+
+    <br><br>
+    <hr>
+
+    <h2>iframe de Henry (con marco) <small>(con width 80% y height 400px)</small></h2>
+
+    <iframe src="https://www.soyhenry.com/" frameborder="1" width="80%" height="400"></iframe>
+
+    <br><br>
+    <hr>
+
+    <h2>iframe de VScode cheat-sheet PDF (con marco) <small>(con width 100% y height 600px)</small></h2>
+
+    <iframe src="/HTML/Practice/assets/VS_Code_Shortcuts.pdf" frameborder="1" width="100%" height="600"></iframe>
+
+    <br><br>
+    <hr>
+
+    <h2>iframe de GoogleMaps (sin marco)<small>(con width 800px y height 650px)</small></h2>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5534.565017085951!2d-58.82031388879365!3d-34.430005079185726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9e8502af9355%3A0x94f1f0001a0e30dc!2sLa%20Lomada%20de%20Pilar!5e0!3m2!1ses!2sar!4v1652728193755!5m2!1ses!2sar"
+        width="800" height="650" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <br><br>
+    <hr>
+
+    <h2>iframe de jonmircha html (sin marco) <small>(con width 560 y height 315)</small></h2>
+
+    <iframe width=560 height="315" src="https://www.youtube.com/embed/-oK6zL01fNM" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

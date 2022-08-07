@@ -1,0 +1,140 @@
+<!--                          ENLACES                           -->
+
+<!-- Los enlaces permiten que el sitio se interactivo, capaz de
+permitirle al visitante del mismo navegar entre los distintos
+documentos HTML que componen una página web. Para esto, se utiliza la
+etiqueta <a> (anchor), encerrando el nombre del vínculo entre la
+etiqueta de apertura y la etiqueta de cierre.
+
+Dentro de la etiqueta <a>, se requiere el atributo "href" donde como
+valor puede ponerse:
+- un URL absoluto ("https://htmlreference.io");
+- un URL relativo ("/element/a");
+- un elemento dentro de la misma página ("#footer", que dirige al
+    visitador al elemento <div id="footer">);
+- un e-mail ("mailto:ejemplo@gmail.com" utilizando el protocolo
+    "mailto", que abre el cliente de correo electrónico del usuario).
+
+También se puede agregar el atributo adicional "target", que define en
+qué pestaña o ventana se abrirá el link cuando se selecciona:
+- "_blank" : nuevo contexto del browser, nueva pestaña;
+- "_self" : en la misma pestaña;
+- "_parent" : en el contexto padre del browser;
+- "_top" : en el contexto superior del browser.
+Las dos últimas sirven para hacer enlaces internos (explicado abajo).
+
+Finalmente, cuando la URL del link no se relaciona con la propia
+página, se debe agregar la etiqueta adicional "rel", y asignarle el
+valor "nofollow", lo cual significa que el destino no está relacionado
+con el contenido propio.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+
+<body style="font-family: sans-serif;">
+
+    <h1 id="inicio">ENLACES</h1>
+
+    <br>
+    <hr>
+
+    <h2 id="youtube">URL absoluto de YT, en nueva pestaña, sin relación a página actual</h2>
+    <a href="https://youtube.com" target="_blank" rel="nofollow">YouTube</a>
+
+    <br><br>
+    <hr>
+
+    <h2 id="intro">URL relativo de 01_Intro.html, en misma pestaña</h2>
+    <a href="/HTML/Html_Css_Practice/01_Intro.html" target="_self">HTML Intro</a>
+
+    <br><br>
+    <hr>
+
+    <h2 id="email">E-mail a s.ostrovsky@hotmail.com</h2>
+    <a href="mailto:s.ostrovsky@hotmail.com">Contact me</a>
+
+    <br><br>
+    <hr>
+
+    <!-- También pueden usarse imágenes para acceder a otros sitios -->
+    <h2 id="imagen">Entra a HTMLreference.io a través de una imagen!</h2>
+    <a href="https://htmlreference.io" target="_blank" rel="nofollow">
+        <img src="/HTML/Html_Css_Practice/htmlReferenceIo.png" alt="htmlreference.io" width="40%" height="auto">
+    </a>
+
+    <br><br>
+    <hr>
+
+    <h2 id="espacio-en-blanco">Espacio de relleno</h2>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <br><br>
+    <hr>
+
+    <!--                    ENLACES INTERNOS                   -->
+    <!-- Para crear enlaces internos, para lo cual se usan los
+        valores "_parent" y "_top" en el atributo "target", los
+    elementos de un documento HTML al cual queramos trasladarnos,
+    deben tener un "id", que se asigna agregando el atributo "id" a
+    tales elementos (Ej: <h1 id="inicio", en el nombre del ID, hay que
+    reemplazar los espacios en blanco por algún caracter separador
+    como "-" o "_", y evitar usar caracteres ajenos al inglés, como la
+    "ñ", vocales con acento o diéresis, etc.). -->
+
+    <h2 id="enlaces-internos">ENLACES INTERNOS</h2>
+
+    <ul type="circle">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#email">e-mail</a></li>
+        <li><a href="#imagen">Imagen</a></li>
+        <li><a href="#enlaces-internos">Enlaces Internos</a></li>
+        <li><a href="#espacio-en-blanco">Espacio de relleno</a></li>
+        <li><a href="#protocolos">Protocolos</a></li>
+        <li><a href="#telefono">Teléfono</a></li>
+        <li><a href="#whatsapp">Whatsapp</a></li>
+        <li><a href="#whatsapp-hey">Whatsapp + Message</a></li>
+        <li><a href="#footer">Footer</a></li>
+    </ul>
+
+    <br><br>
+    <hr>
+
+    <!--                       PROTOCOLOS                       -->
+    <!-- En una sección anterior, se usó el protocolo "mailto" para
+    abrir el cliente de correo electrónico del usuario. Además de ese,
+    existen otros protocolos, como por ejemplo "tel", para contactarse
+    por teléfono cuando se ingresa a la página web desde un celular.
+    BUSCAR URL O PROTOCOLOS URL DE LOS SITIOS ANTES DE USARLOS!!-->
+
+    <h2 id="protocolos">PROTOCOLOS</h2>
+
+    <h3 id="telefono">tel:</h3>
+    <a href="tel:5491127290390">Call me!</a>
+
+    <h3 id="whatsapp">Whatsapp</h3>
+    <a href="https://wa.me/5491127290390" target="_blank">Say Hi! on Whatsapp</a>
+
+    <h3 id="whatsapp-hey">Whatsapp + Message</h3>
+    <a href="https://api.whatsapp.com/send?phone=5491127290390&text=Hey!" target="_blank">Say Hi! on Whatsapp</a>
+
+    <br><br>
+    <hr>
+
+</body>
+
+<footer>
+    <p id="footer">Esto es el Footer de la página</p>
+    <p><a href="#inicio">Arriba! ⏫</a></p>
+</footer>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

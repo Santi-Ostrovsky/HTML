@@ -1,0 +1,398 @@
+<!--                    METADATA & SCRIPTING                    -->
+<!--                     -Etiquetas azules-                     -->
+
+<!--                        ETIQUETA HEAD                       -->
+
+<!-- La etiqueta <head> no muestra contenido visual en la página, los
+usuarios no pueden ver el contenido, pero sirve para el marcado de los
+elementos de dicha página, como documentos JS o CSS, iconos o
+información para los buscadores web. -->
+
+<!--                        ETIQUETA BODY                       -->
+
+<!-- La etiqueta <body> es lo contrario, dentro tiene contenido que
+se muestra al usuario. -->
+
+<!--                       ORDEN Y JERARQUÍA                       -->
+
+<!-- El orden de las etiquetas es importante, porque hay etiquetas que
+no pueden abrirse dentro de otras. Por ejemplo, no puede abrirse la 
+etiqueta <body> dentro de la etiqueta <head>, o abrir una etiqueta
+<title> dentro del head y cerrarla fuera del mismo. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - Aprendiendo HTML</title>
+    <meta name="description" content="En esta página, se aprenden 
+    los fundamentos de HTML, de manera muy fácil.">
+    <link rel="stylesheet" href="/HTML/Html_Css_Practice/assets/estilos.css">
+    <!--Link de estilo explicado en línea 357-->
+</head>
+
+<body>
+    <p>Hola, esto es texto que se va a mostrar en la página web.</p>
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                        ETIQUETA HTML                       -->
+
+<!-- En el ejemplo de estructura HTML anterior, se muestra primero la
+etiqueta DOCTIPE, y después la etiqueta <HTML>.
+    
+Dicha etiqueta establece parámetros generales para la página , por
+ejemplo, el atributo "lang", de "language". Cada país tiene su código
+de dominio (México: MX, Chile: CL, etc.), y si se quisiera especificar
+que el lenguaje que se utiliza en la página es particular de un país
+en específico, se debe poner como "[idioma]-[país]" (ej: ["es-MX"]).
+En el caso del ejemplo más arriba, "en" hace referencia al inglés.
+
+Debajo, una lista de todos los ccTLD (country code Top Level Domains):
+https://www.ionos.es/digitalguide/dominios/extensiones-de-dominio/cctld-la-lista-completa-de-dominios-por-pais/ -->
+
+<!--                        ETIQUETA DOCTYPE                       -->
+
+<!-- Determina el tipo de lenguaje en el documento o estructura que
+sigue a la etiqueta. En este caso, el Doctype es HTML, que en la
+versión 5 se simplificó para aceptad todo tipo de código dentro del
+documento. -->
+
+<!--                         META-ETIQUETAS                       -->
+
+<!-- Las meta-etiquetas son las se ven dentro del Head, y expresan
+"metadatos" que no van a ser mostrados al usuario. Empezando por la
+primera: <meta charset="UTF-8">, con el atributo "charset" (juego de
+caracteres en el cual está codificada una página), se determinan los
+caracteres que van a ser aceptados por la página, en este caso: UTF-8,
+un paquete de caracteres universales compatibles con escritura ASCII. -->
+
+<!-- La segunda, <meta http-equiv="X-UA-Compatible" content="IE=edge">,
+con el atributo "http-equiv" (define la directiva de programa), intenta
+igualar las configuraciones del documento a las de un navegador web
+determinado, que se indicará con el atributo "content" dentro de la
+misma etiqueta. En este caso, el navegador predeterminado de la
+etiqueta es "edge" porque VS-Code es de Microsoft, al igual que Edge.
+Esta etiqueta no es un estándar, asi que puede eliminarse de la
+estructura. -->
+
+<!-- La tercera:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">,
+es muy importante. "name", es la zona visible del navegador en donde se
+va a "renderizar" el contenido de la página, en este caso, "viewport".
+Esta es la etiqueta que le indica al navegador y a otros dispositivos,
+cómo adaptar la visualización del contenido.
+
+Viewport como tal tiene varios posibles valores (los cuales se pueden
+ver tanto en la página MDN como en https://htmlreference.io/), que
+serán emparejados con el atributo "content". En este caso, los valores
+utilizados de manera estándar al crear la etiqueta, son:
+- width: indica el ancho de la página ("device-width").
+- initial-scale: indica el nivel de zoom al entrar a la página (1).
+Esta etiqueta es especialmente importante para lo que es el
+"responsive design" en CSS. -->
+
+<!-- TÍTULO Y DESCRIPCIONES -->
+
+<!-- El título, debe ser algo referente a lo que va a encontrar el
+usuario al ingresar en la página web (en este caso, "Aprendiendo HTML"),
+lo cual es tomado en cuenta a la hora de encontrar la página a través
+de buscadores como Google. Es importante que el título de la página
+tenga, como máximo, entre 55 y 65 caracteres de longitud. El título se
+muestra en la pestaña del navegador. 
+
+    La descripción, usa una etiqueta parecida a la de "viewport", que
+tiene un "name" y un "content". En este caso, la meta-etiqueta debe
+llevar el nombre "description" en el atributo "name", y dentro del
+atributo "content", llevar una línea de contenido que no debe rebasar
+los 165 caracteres, en la que se describa el contenido de la página.
+
+El título y la descripción son los que aparecen en los motores de
+búsqueda. Esta mal que en todas las secciones de una página web todas
+tengan el mismo título y la misma descripción, cada sección / cada
+documento HTML debe tener un título y una meta-descripción distintos.-->}
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                   ETIQUETAS MÁS UTILIZADAS                  -->
+<!--                          DE FORMATO                         -->
+
+<!-- <p> PÁRRAFOS
+
+Etiqueta de párrafo. Cada vez que se utilize la etiqueta, se iniciará
+otro párrafo nuevo, y debe cerrarse cada vez que se use. -->
+
+<p>Esto es un párrafo nuevo.</p>
+
+<!-- <h1 - h6> ENCABEZADOS
+
+De H1 a H6, se muestran títulos en orden jerárquico, siendo H1 el más
+grande (título principal), y H6 el más pequeño. Un mismo documento
+HTML no debe tener mas de un título H1, porque es el título principal
+buscado por los motores de búsqueda. -->
+
+<h1>Encabezado nivel 1</h1>
+<h2>Encabezado nivel 2</h2>
+<h3>Encabezado nivel 3</h3>
+<h4>Encabezado nivel 4</h4>
+<h5>Encabezado nivel 5</h5>
+<h6>Encabezado nivel 6</h6>
+
+<!--  <b> NEGRITA </b>  -->
+<b>NEGRITA</b>
+
+<!-- <i> CURSIVA </i> -->
+<i>CURSIVA</i>
+
+<!-- <u> SUBRAYADO </u> -->
+<u>SUBRAYADO</u>
+
+<!-- <sup> SUPER-ÍNDICE </sup> (e=mc2 - el 2 es super índice) -->
+<p>E=MC<sup>2</sup></p>
+
+<!-- <sub> SUB-ÍNDICE </SUB> (H2O - el 2 es sub índice) -->
+<p>H<sub>2</sub>O</p>
+
+<!-- <mark> RESALTADO </mark> -->
+<mark>RESALTADO</mark>
+
+<!-- <small> LETRA CHICA </small> -->
+<p>LETRA NORMAL <i>VS</i> <small>LETRA CHICA</small></p>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                   ETIQUETAS MÁS UTILIZADAS                  -->
+<!--                    DE TEXTO  (SEMÁNTICAS)                   -->
+
+<!-- <strong> TEXTO DE IMPORTANCIA
+Funciona de manera parecida a la etiqueta <b> (negrita) pero la
+finalidad es distinta, ya que es una herramienta de énfasis de texto,
+y no de formato, tiene un significado distinto para el navegador. -->
+<p><strong>Texto de importancia.</strong></p>
+
+<!-- <em> ÉNFASIS
+Funciona de manera parecida a la etiqueta <i> (cursiva) pero la 
+finalidad es distinta, ya que es una herramienta de énfasis de texto,
+y no de formato, tiene un significado distinto para el navegador. -->
+<em>Texto en énfasis.</em>
+
+<!-- <blockquote> CITA DE REFERENCIA
+Etiqueta utilizada para enfatizar citas de autores, que muestran el
+texto tabulado o indentado. -->
+<blockquote>Cita de referencia.</blockquote>
+
+<!-- <cite> AUTOR DE CITA
+Etiqueta que se utiliza para demarcar el autor de una cita.
+Nuevamente, parecida a <i> (cursiva) pero con la finalidad de
+enfatizar el texto y no de darle formato. -->
+<p><cite>Autor de la cita.</cite></p>
+
+<!-- <time> ETIQUETA DE FECHA Y HORA
+Etiqueta utilizada para imprimir fechas y horas, que toma un atributo:
+"datetime", cuyo valor tiene que ser un "time-string" válido.
+https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#dates-and-times -->
+<time datetime="2022-05-13T22:00">20:00</time>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                     ETIQUETAS DE SALTO                     -->
+
+<!-- <br> SALTO DE LÍNEA (PUNTO Y APARTE)
+Etiqueta sin etiqueta de cierre que marca un salto de línea, como
+apretar "enter" en un editor de texto.-->
+<p>Esto es un párrafo nuevo.<br>Y esto es una nueva línea.</p>
+
+<!-- <hr> LÍNEA HORIZONTAL (VISUAL)
+Parecida a resultados que pueden ser obtenidos con CSS, pero esta
+línea tiene un significado de separación semántica de contenido, no
+de formato visual. -->
+<hr>Línea horizontal arriba y abajo
+<hr>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                   ETIQUETAS DE FORMATEO                    -->
+
+<!-- <pre> PRE-FORMATEO (RESPETAR FORMATO)
+Esta etiqueta se utiliza para que el código HTML respete el formato
+dado por el usuario al ingresar texto en el editor. Por ejemplo, al
+hacer una lista indentada con marcador de items, si no se utilizara
+esta etiqueta, el texto aparecería todo de corrido, pero al utilizarse,
+el texto se mostrará en el navegador tal cual fue ingresado y con una
+tipografía distinta: -->
+<p>
+<pre>
+Esto es una lista con formato de ingreso:
+    - Item 1.
+    - Item 2.
+    - Item 3.
+
+→ El navegador respeta la posición de todos los caracteres ingresados.
+    </pre>
+</p>
+
+<!-- <code> FORMATO DE CÓDIGO
+El navegador mostrará el texto en formato de código, con la misma
+tipografía que la etiqueta anterior: -->
+<p>
+    <code>
+Esto es código JavaScript → var hello = () => console.log('Hello, user.'); hello();
+</code>
+</p>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                  ETIQUETAS ESTRUCTURALES                   -->
+
+<!-- <div> Etiqueta contenedora sin semántica. Es utilizada para dar
+estilo, como una caja cuyo tamaño y color pueden ser modificados a
+gusto, dentro de la cual se pueden ubicar otras cajas. -->
+<div>ESTO ES UN DIV</div>
+
+<!-- <header> HEADER - CABECERA
+Utilizada para marcar la cabecera de un sitio web o de una sección. -->
+<header>ESTO ES UN HEADER</header>
+
+<!-- <main> BLOQUE PRINCIPAL DE LA PÁGINA
+Etiqueta que define la sección  principal del documento. Al igual que
+H1, sólo puede existir una única etiqueta main por cada documento HTML.-->
+<main>ESTA ES LA SECCIÓN PRINCIPAL DEL DOCUMENTO HTML</main>
+
+<!-- <footer> PIE DE PÁGINA
+Etiqueta que define un pie de página del un sitio web o de una sección.-->
+<footer>ESTO ES UN PIE DE PÁGINA</footer>
+
+<!-- <article> ARTÍCULO
+Etiqueta para denotar artículos dentro de la página o sección.
+Representa una sección autocontenida (es una sección en sí misma por
+su estructura, independiente del resto del contenido en el sitio). -->
+<article>ESTO ES UN ARTÍCULO></article>
+
+<!-- <section> SECCIÓN
+Etiqueta demarcadora de una nueva sección de contenido genérico en la
+página. -->
+<section>ESTO ES UNA NUEVA SECCIÓN</section>
+
+<!-- <nav> REFERENCIA
+Etiqueta que se utiliza para representar una sección, que se linkea
+con otras con otras páginas o secciones de la misma página. Puede
+utilizarse tanto como esquema de links de navegación como una
+botonera. -->
+<nav>
+    <a href="/">NAVEGAR a carpeta superior</a>
+</nav>
+
+<!-- <aside> NOTA LATERAL - CONTENIDO COMPLEMENTARIO / SECUNDARIO
+Etiqueta que puede utilizarse para separar contenido de la página
+para ubicarlo a un costado de la página, como por ejemplo, una
+sección de "artículos relacionados" o "videos relacionados" en YT. -->
+<aside>CONTENIDO LATERAL</aside>
+
+<!-- <address> DIRECCIÓN
+Etiqueta que se utiliza para la representación semántica de una
+dirección física/real, o de información de contacto. -->
+<address>Dir. Barrio La Lomada De Pilar</address>
+
+<!-- ---------------------------------------------------------- -->
+
+<!--        ETIQUETAS DE BLOQUE VS. ETIQUETAS DE LÍNEA          -->
+
+<!-- Esto se ve más a fondo en CSS. Pero hay conjuntos de etiquetas
+que trabajan en línea, y otras que trabajan en bloque. La etiqueta de
+bloque, por excelencia es la <div></div>, y la etiqueta de línea por
+excelencia es la <span></span>. Ninguna tiene contenido semántico,
+pero la diferencia entre una y la otra, es que las etiquetas de bloque
+generan un salto de línea tanto al abrir como al cerrar la etiqueta,
+y su contenido va a ocupar todo el ancho disponible de la página. Las
+etiquetas de línea, en cambio, sólo ocupa el espacio necesario para
+mostrar su contenido.
+
+Como ejemplo, podemos ver como ambas etiquetas ocupan lugar en la
+página al aplicarles un estilo (lo que en realidad se hace con CSS,
+pero puede hacerse en HTML con el propósito de ejemplificar.)-->
+
+<div style="background-color: yellow;">ESTO ES UNA ETIQUETA DE BLOQUE</div>
+<span style="background-color: red; color: white;">ESTO ES UNA ETIQUETA DE LÍNEA</span>
+<span style="color: blue;">ESTA ES OTRA ETIQUETA SPAN DISTINTA (DE LÍNEA).</span>
+
+<!-- La etiqueta de línea no genera un salto de línea, ni ocupa todo
+el ancho disponible de la página. Hasta su formato se detiene donde
+se cierra la etiqueta. -->
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                    ESTILOS CSS EN HTML                     -->
+
+<!-- Una forma de aplicar estilos, es a través de la palabra-clave
+"style", como en el ejemplo anterior, en el cual todos los estilos
+que se aplicarán a los elementos se encuentran descriptos dentro de
+la etiqueta correspondiente, seguido de la palabra "style".
+
+Otra forma de aplicar estilos, es creando un estilo para una clase
+de elementos a través de la etiqueta <style>. Preferentemente, esto
+debe hacerse en la cabecera del documento HTML (head), pero como poder,
+se puede hacer en cualquier parte del mismo.
+
+Por ejemplo, puede hacerse sobre todos los títulos "h2", de la
+misma forma en la que se crean objetos en JavaScript:-->
+
+<style>
+    h2 {
+        color: brown;
+        background-color: burlywood;
+    }
+</style>
+
+<!-- Ahora todos los encabezados de nivel 2 van a tener esas
+características de estilo: -->
+
+<h2>ESTILO APLICADO A LA CLASE H2</h2>
+
+<!-- La forma más correcta de aplicar estilos a un documento HTML, es
+creando una "hoja de estilos". Esto se hace, de forma más ordenada,
+creando una carpeta "assets" dentro del mismo directorio, y dentro de
+esta carpeta, un archivo CSS con cualquier nombre (Ej. estilos.css).
+Una vez creado el documento, en la cabecera del documento (head),
+se utiliza la etiqueta <link></link> para crear un vínculo con dicho
+archivo de estilos. 
+
+<link rel="stylesheet" href="[ruta del archivo]"> VER HEADER LÍNEA 33.
+
+Debe usarse tal cual está en el ejemplo, con los atributos "rel" y
+"href", y el valor "stylesheet" para el atributo "rel".
+
+→ El archivo utilizado en este documento HTML tiene los siguientes
+estilos:
+
+h1 {
+color: aqua;
+background-color: purple;
+}
+
+body {
+font-family: sans-serif;
+}-->
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                   CARACTERES ESPECIALES                    -->
+
+<!-- Para ingresar caracteres especiales en HTML, como por ejemplo
+los símbolos de mayor y menor que <>, se utiliza una serie de
+caracteres especiales que empiezan con "&" y terminan con ";", que
+representan dichos símbolos en texto para poder ser renderizados
+por el navegador, y se llaman HTML ENTITIES:
+
+https://www.freeformatter.com/html-entities.html                -->
+
+<!-- ---------------------------------------------------------- -->
+
+<!--                 LISTA DE TODAS LAS ETIQUETAS               -->
+
+<!-- https://htmlreference.io/ -->

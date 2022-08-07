@@ -1,0 +1,165 @@
+<!--                          TABLAS                           -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+
+<body style="font-family: sans-serif;">
+    <h1>TABLAS</h1>
+    <hr>
+
+    <!-- Para crear una tabla, se utiliza la etiqueta <table> dentro del
+cuerpo (body) de la página. Dentro de la etiqueta "table", se usan las
+etiquetas "tr" (table row) para definir las filas, dentro de la cual
+se utilizará la etiqueta "td" (table data) para definir cada celda y
+como atajo de Emmet, puede ponerse "td*[x]" para crear un número de
+celdas 'x': -->
+    <h2>-- Tabla Básica --</h2>
+    <table>
+        <tr>
+            <!-- Fila 1 - td*3 -->
+            <td>NOMBRE</td>
+            <td>APELLIDO</td>
+            <td>EDAD</td>
+        </tr>
+        <tr>
+            <!-- Fila 2 - td*3 -->
+            <td>Santiago</td>
+            <td>Ostrovsky</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <!-- Fila 3 - td*3 -->
+            <td>Juan</td>
+            <td>Perez</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <!-- Fila 4 - td*3 -->
+            <td>Esteban</td>
+            <td>Garay</td>
+            <td>32</td>
+        </tr>
+    </table>
+    <!-- De esta manera, todos los valores están alineados a la
+izquierda dentro de sus celdas en la tabla. -->
+
+    <hr>
+    <!-- Para crear una tabla más elaborada o compleja, pueden crearse
+grupos de filas de una determinada temática, haciendo uso de 3
+etiquetas: "thead" (table head), que define un grupo de filas al
+comienzo de una tabla, dentro de la cual para las filas se usa la
+etiqueta "th" (table heading) en lugar de "td"; "tbody" (table body),
+que define un grupo de filas en el cuerpo de la tabla; y "tfoot"
+(table footer), que define un grupo de filas al final de la tabla, en
+donde las filas también son definidas con la etiqueta "th":-->
+    <h2>-- Tabla Elaborada --</h2>
+    <h3>↓ Head + Body + Foot + Colspan ↓</h3>
+    <table>
+        <thead>
+            <tr>
+                <!-- A su vez, puede usarse un atributo llamado
+                "colspan", y como valor se le asigna la cantidad de
+                columnas que queremos que ocupe la celda: -->
+                <th colspan="3">DATOS PERSONALES</th>
+            </tr>
+        </thead>
+        <thead>
+            <!-- Puede haber mas de un encabezado de tabla -->
+            <tr>
+                <!-- Fila 1 - th*3 -->
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Fila 2 - td*3 -->
+                <td>Santiago</td>
+                <td>Ostrovsky</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <!-- Fila 3 - td*3 -->
+                <td>Juan</td>
+                <td>Perez</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <!-- Fila 4 - td*3 -->
+                <td>Esteban</td>
+                <td>Garay</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- Fila 5 -->
+                <th colspan="3">--------------------------------------------</th>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- De esta manera, todos los valores demarcados con etiquetas
+especiales, estarán centrados dentro de las celdas que ocupan en la
+tabla. -->
+
+    <br><br> <!-- br*2 ("br" = salto de línea) -->
+
+    <!-- También puede usarse el atributo "rowspan", que como valor se
+le pasará la cantidad de filas que se quiere que esa celda ocupe. Para
+ejemplificar esto, el segundo y tercer elemento en la lista tendrán la
+misma edad, de manera que no haría falta mostrarla dos veces, si no
+una única vez para ambos elementos: -->
+    <h3>↓ Rowspan + Small ↓</h3>
+    <table>
+        <thead>
+            <tr>
+                <!-- A su vez, puede usarse un atributo llamado
+                        "colspan", y como valor se le asigna la cantidad de
+                        columnas que queremos que ocupe la celda: -->
+                <th colspan="3"><small>DATOS PERSONALES</small></th>
+            </tr>
+        </thead>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Fila 2 - td*3 -->
+                <td>Santiago</td>
+                <td>Ostrovsky</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <!-- Fila 3 - td*3 -->
+                <td>Juan</td>
+                <td>Perez</td>
+                <td rowspan="2">30</td>
+            </tr>
+            <tr>
+                <!-- Fila 4 - td*2 -->
+                <td>Esteban</td>
+                <td>Garay</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- Fila 5 -->
+            <th colspan="3">--------------------------------------------</th>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->
