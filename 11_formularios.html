@@ -1,0 +1,472 @@
+<!--                         FORMULARIOS                        -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIOS</title>
+    <meta name="description" content="FORMULARIOS">
+    <link rel="stylesheet" href="">
+</head>
+
+<body style="font-family: sans-serif;">
+    <h1>FORMULARIOS</h1>
+
+    <br><br>
+    <hr>
+
+    <!-- Etiqueta <form> crea un formulario. Es una etiqueta de
+bloque, y en "action", se requiere como valor, aquel lugar en donde
+se van a guardar los resultados del formulario. Si el atributo no
+existiera y su valor fuera nulo o vacío, el formulario se va a
+"auto-procesar", como si se recargara la página. En la práctica, el
+envío de los formularios se controla con programación JS.
+
+https://htmlreference.io/element/form/
+
+Hay 2 métodos de envío de los formularios, que se agregan con el
+atributo "method": "GET" y "POST". Get, es el valor por defecto del
+atributo method, y envía los valores directamente a través de la
+URL. Post, envía la información a través de la cabecera del
+documento, de forma oculta, lo cual debe pasar cuando por ejemplo,
+es envían usuarios y claves de ingreso a una página (login data).
+
+Para que la URL hacia donde se envían los resultados detecte cada
+uno de los inputs, los mismos deben llevar el atributo "name=[]",
+indicando el nombre del elemento en el formulario, que se va a
+igualar a una variable dentro del código de fondo de la página (JS).
+LOS VALORES DE LOS FORMULARIOS SIEMPRE DEBEN LLEVAR EL ATRIBUTO
+"NAME", SI NO SE PIERDEN LOS VALORES.
+
+Para evitar el comportamiento de auto-completado con los datos
+guardados del navegador o dispositivo dentro de las cajas, debe
+usarse el atributo "autocomplete=[]" con dos posibles valores: "on"
+(por defecto) y "off", necesario para evitar el auto-completado. El
+auto-completado por parte del navegador se sincroniza con el
+atributo "name" del campo a completar (ej: si el valor de "name"
+coincide con "email", el navegador va a mostrar como opciones todas
+las direcciones de correo electrónico utilizadas o grabadas por el
+usuario). El atributo autocomplete (on/off) puede usarse tanto
+dentro de la etiqueta "form" (aplica a todo el formulario), o a
+cada caja de manera individual.
+
+Si bien desde el punto de vista de las validaciones de un
+formulario, se usa código JS, un tributo importante y muy útil, que
+sirve para impedir el envío de un formulario sin que cierto campo
+esté completado (campos obligatorios), es el atributo "required"
+(booleano).
+
+Otro atributo de validación es "pattern=[]", que sirve para prevenir
+el ingreso de ciertos caracteres (o sólo permitir el ingreso de
+ciertos caracteres) dentro de una caja. Para eso, se usan como
+valores, expresiones regulares (tema de JS). Por ejemplo, una
+expresión válida es: "^[A-Za-z]+$" (indica que únicamente se aceptan
+letras mayúsculas y minúsculas).
+https://www.youtube.com/watch?v=aPkBloR9MEI&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA&index=2
+
+Esa expresión hará que el usuario reciba el mensaje "Utiliza un
+formato que coincida con el solicitado". En caso de querer que el
+mensaje sea otro, para mejor instruir al usuario sobre qué
+información debe ingresar en el campo a completar, se usa el
+atributo "title=[]", siendo el mensaje escrito dentro de los
+corchetes el que se mostrará al usuario si ingresa caracteres no
+permitidos.
+
+Para anteponer una línea de texto a la caja, como indicación de qué
+es lo que el usuario debe completar en ella, se usa la etiqueta de
+línea <label for=""></label>, donde dentro de la etiqueta se escribe
+el texto indicativo y dentro del "for", el valor que equivalga al
+"id" de la caja, de manera que cliqueando el nombre del label se
+posicione el cursor dentro de la caja, para que el usuario pueda
+escribir en ella. Siendo que la indicación de qué es lo que el
+usuario debe poner en las cajas de texto ya está dada por el
+atributo  "placeholder", no es tan necesario en todas las cajas,
+pero en algunas, como las cajas checkbox o radio (donde el usuario
+sólo puede seleccionar una opción), sí son necesarias las labels ya
+que no hay espacio dentro de las cajas para poder texto de muestra.
+
+https://htmlreference.io/element/label/ -->
+
+    <form action="https://youtube.com" method="post">Formulario de ejemplo (envío a YouTube):
+        <br><br>
+        <label for="Username">Usuario: <input type="text" name="username" id="Username" placeholder="Nombre de usuario"
+                pattern="^[A-Za-z]+$" title="Sólo letras!" required></label>
+        <br>
+        <label for="Password">Contraseña: <input type="password" name="password" id="Password" placeholder="Contraseña"
+                required></label>
+        <br>
+        <label for="Email">E-mail: <input type="email" name="email" id="Email" placeholder="Correo electrónico"
+                required></label>
+        <br>
+        <label for="PhoneNumber">Teléfono: <input type="tel" name="tel" id="PhoneNumber" placeholder="Teléfono"
+                pattern="^[0-9]+$" title="Sólo números!" required></label>
+        <br>
+        <label for="Usernumber">Número de usuario: <input type="number" name="user-number" id="Usernumber"
+                placeholder="861995" value="861995" readonly disabled></label>
+        <br>
+        <input type="file" value="Si desea subir archivos, hágalo aquí" multiple>
+        <br><br>
+        <input type="reset" value="Borrar"> <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Elementos de formularios.
+        LA ETIQUETA INPUT NO TIENE CIERRE.
+
+        https://htmlreference.io/element/input/
+
+- <input type="text"> dibuja una caja de texto, y trabaja en línea,
+no en bloque. Sin el atributo "type" y el valor "text", igualmente
+dibuja una caja en blanco porque es el valor por defecto, pero no
+va a ser una caja de texto. -->
+    <h2>INPUT</h2>
+
+    <br><br>
+
+    <h3>text</h3>
+
+    <input type="text">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="checkbox"> sirve para las casillas de
+chequeo con tildes. -->
+    <h3>checkbox</h3>
+
+    <input type="checkbox">
+
+    <br><br>
+
+    <h4>Formulario ejemplo de checkbox</h4>
+    <h5>Selecciona tus intereses:</h5>
+    <!-- Cuando el input esta dentro del label, no es necesario el
+    atributo "for" dentro de la etiqueta "label". -->
+
+    <!-- Cuando todos los checkboxes tienen el mismo nombre
+    (atributo "name"), quiere decir que corresponden al mismo tema
+    o formulario, y el valor que se le asigna va a ser el de la
+    cantidad y tipo de selecciones que haga el usuario. Esto es
+    útil si son muchas las opciones entre las cuales se puede
+    elegir.
+    
+    Sí es importante que exista una distinción entre los
+    nombres si no se especifica un valor para cada opción (es
+    decir que cada caja queda en una variable checked "on" o "off",
+    del tipo booleano), ya que no se sabría cuales son las opciones
+    seleccionadas de nos existir una nombre distinto para cada una.-->
+
+    <!-- Los nombres dentro del atributo "value" siempre tienen que
+    ser los normalmente admitidos en "nomenclatura web", es decir,
+    palabras en inglés o caracteres admitidos en el inglés (sin
+    acentos, diéresis o "ñ"), y siempre en minúsculas.-->
+    <form>
+        <label><input type="checkbox" name="intereses" value="deportes">Deportes</label>
+        <label><input type="checkbox" name="intereses" value="finanzas">Finanzas</label>
+        <label><input type="checkbox" name="intereses" value="salud">Salud</label>
+        <label><input type="checkbox" name="intereses" value="politica">Política</label>
+        <label><input type="checkbox" name="intereses" value="ecologia">Ecología</label>
+        <label><input type="checkbox" name="intereses" value="educacion">Educación</label>
+        <br><label><input type="checkbox" name="terminos" value="acepta" required>Acepto los términos y
+            condiciones</label>
+        <!-- Los checkbox también pueden
+            tener opciones requeridas. -->
+        <input type="reset"><input type="submit">
+    </form>
+
+    <br><br>
+    <hr>
+
+    <!-- Puede tener el atributo booleano "checked", que sirve para
+que la casilla aparezca chequeada de manera predeterminada. -->
+
+    <!-- - <input type="radio"> sirve para cuando se debe llenar
+solo una opción. -->
+    <h3>radio</h3>
+
+    <input type="radio">
+
+    <br><br><br>
+
+    <p>Para que muchas opciones dentro de un mismo formulario
+        cuenten como parte de un input radio, todas las opciones
+        deben tener el mismo nombre definido en el atributo "name"
+        ↓ ↓ ↓ ↓
+    </p>
+
+    <!-- En los radio, hay un atributo booleano similar a "selected"
+    que sirve para que una opción aparezca marcada de manera
+    predeterminada, y es a través del atributo "checked" (idem
+    checkbox).
+
+    En el caso de que sí o sí una de las opciones sea necesaria para
+    el envío del formulario, se puede usar el atributo booleano
+    "required", el cual sólo es necesario en una de las opciones
+    radio, no en todas (mientras todas las opciones pertenezcan al
+    mismo formulario).-->
+
+    <h4>Formulario ejemplo de radio</h4>
+    <h5>Selecciona tu lenguaje de programación favorito:</h5>
+    <form>
+        <label for="radio-js">JavaScript<input type="radio" name="lenguaje" id="radio-js" required></label>
+        <br>
+        <label for="radio-py">Python<input type="radio" name="lenguaje" id="radio-py" checked></label>
+        <br>
+        <label for="radio-c">C<input type="radio" name="lenguaje" id="radio-c"></label>
+        <br>
+        <label for="radio-java">Java<input type="radio" name="lenguaje" id="radio-java"></label>
+        <br>
+        <input type="reset"><input type="submit">
+    </form>
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="date"> (verificar soporte en navegadores) es
+para las cajas de tipo calendario, para seleccionar una fecha. -->
+    <h3>date</h3>
+
+    <input type="date">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="color"> seleccionador de color. -->
+    <h3>color</h3>
+
+    <input type="color">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="button"> dibuja un botón que por si solo
+no va a funcionar, por lo que necesita el atributo
+"value=[nombre del botón]". -->
+    <h3>button</h3>
+
+    <input type="button" value="Esto es un botón">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="submit"> sirve para el "enviar", que estando
+dentro de un formulario, es el botón que envía los datos del mismo.-->
+    <h3>submit</h3>
+
+    <input type="submit">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="reset"> sirve para resetear los valores del
+formulario. -->
+    <h3>reset</h3>
+
+    <input type="reset">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="file"> sirve para subir un archivo al
+formulario, y si fuera necesario permitir que el usuario tenga la
+capacidad de subir múltiples archivos desde el mismo botón, se debe
+agregar el atributo booleano "multiple". -->
+    <h3>file</h3>
+
+    <input type="file">
+
+    <br><br>
+
+    <h3>multiple files</h3>
+
+    <input type="file" multiple>
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="hidden"> sirve para crear inputs invisibles
+a simple vista, pero que son de utilidad para el programador que
+crea el formulario, ya que a través del atributo "value" se le puede
+asignar un idioma al mismo "=["es"]" / "=["en"]" y también el
+atributo "name" para poder guardar datos del formulario en variables
+dentro del código, como por ejemplo: "name="idioma" value="es"".-->
+    <h3>hidden</h3>
+
+    <input type="hidden" name="idioma" value="es">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="email"> sirve para crear un botón común y
+corriente, que permite escribir una dirección de correo, que
+requiere caracteres como "@" y ".com" (esta etiqueta tiene carga
+semántica, por eso modifica el comportamiento de los dispositivos
+al pararse sobre la misma. Ej: los teclados de los celulares cambian
+para mostrar el "@" en el teclado, porque se espera que el usuario
+ingrese un email válido). -->
+    <h3>email</h3>
+
+    <input type="email">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="number"> sirve para ingresar números.
+También es una etiqueta semántica y cambia el comportamiento de los
+dispositivos al pararse sobre ella (los celulares ingresan al
+teclado numérico de forma automática, por ejemplo). -->
+    <h3>number</h3>
+
+    <input type="number">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="tel"> sirve para requerir un número
+telefónico. Etiqueta semántica como las anteriores, muestra un
+teclado telefónico. -->
+    <h3>tel</h3>
+
+    <input type="tel">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="password"> sirve para ocultar los
+caracteres ingresados por le usuario en forma de contraseña. -->
+    <h3>password</h3>
+
+    <input type="password">
+
+    <br><br>
+    <hr>
+
+    <!-- - <input type="search"> sirve para ingresar contenido ASCII
+como el buscador de google, y agrega una cruz para poder borrar todo
+lo escrito dentro de la caja de texto. -->
+    <h3>search</h3>
+
+    <input type="search">
+
+    <br><br>
+    <hr>
+
+    <!-- ---------------------------------------------------------- -->
+
+    <!-- - <textarea name="" id="" cols="30" rows="10"></textarea>
+sirve para crear una caja de texto de tipo "comentario", y en la
+etiqueta los únicos atributos necesarios son "cols" (caracteres) y
+"rows" (filas), cuyos valores determinan el tamaño de la caja de
+texto. Si se agrega texto entre la etiqueta de apertura y etiqueta
+de cierre, el mismo aparecerá de forma automática ya escrito dentro
+de la caja de comentarios. 
+
+https://htmlreference.io/element/textarea/-->
+    <h2>textarea</h2>
+
+    <textarea name="" id="" cols="60" rows="8">Esto es una caja de comentarios</textarea>
+
+    <br><br>
+    <hr>
+
+    <!-- - <select name="" id=""> no lleva cierre, necesita de otra
+etiqueta "<option value="">[opción a elegir]</option>", lo cual crea
+un selector de opciones, siendo cada etiqueta completa "option" una
+opción dentro del selector. Al igual que el "file", a la etiqueta
+"select" se le puede agregar el atributo booleano "multiple" para
+aceptar mas de una opción.
+
+https://htmlreference.io/element/select/
+
+https://htmlreference.io/element/option/ -->
+    <h2>SELECT</h2>
+    <h3>select + multiple + option[s]</h3>
+
+    <select name="" id="" multiple>
+        <option value="JavaScript">Javascript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+    </select>
+
+    <br><br>
+
+    <h3>Ejemplo de formulario completo con Select</h3>
+
+    <form>
+        <h4>Selecciona tu idioma</h4>
+        <select name="idioma" id="idioma" required>
+            <option value="" selected>Elige una opción</option>
+            <!-- El valor de este elemento está vacío, por lo tanto
+            no cuenta como una opción válida al momento de enviar el
+            formulario, ya que tiene el atributo "required".
+            
+            A su vez tiene el atributo booleano "selected", que
+            indica que por defecto, será la opción marcada cuando
+            el usuario ingrese por primera vez al formulario (al ser
+            la primera, ya iba a ser así, pero si estuviera en otra
+            posición dentro de la lista de opciones, el atributo
+            "selected" haría que esta opción fuera la marcada por
+            defecto). -->
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+            <option value="fr">Francés</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Portugués</option>
+        </select>
+        <br><br>
+        <input type="reset">
+        <input type="submit">
+    </form>
+
+    <br><br>
+    <hr>
+
+    <h2>Formulario de contacto</h2>
+    <form action="https://formsubmit.co/s.ostrovsky@hotmail.com" method="post">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            title="sólo letras y espacios en blanco" required>
+        <br>
+        <input type="email" name="correo" placeholder="Escribe tu correo" title="formato de correo inválido" required>
+        <br>
+        <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="reset"><input type="submit">
+    </form>
+
+
+
+
+    <br><br><br><br><br><br>
+
+    <!-- . Para el envío de los formularios se necesita programación
+JS, y para el estilo de los mismos se usa CSS. -->
+
+    <!-- ---------------------------------------------------------- -->
+
+    <!-- Atributos y valores posibles para los inputs: -->
+
+    <!-- "readonly", sirve para que el usuario no pueda modificar
+el contenido dentro de la caja de texto (o del tipo que sea). Los
+atributos booleanos (que no llevan un valor) se agregan al final
+de la etiqueta. -->
+
+    <!-- "disabled", sirve para mostrar una caja deshabilitada o
+"gris", indicando que no se puede modificar o acceder a ella
+(booleano). -->
+
+    <!-- "value=[]" para dar un valor predeterminado a una caja. -->
+
+    <!-- "placeholder=[]", sirve para mostrar un mensaje dentro de
+una caja de texto (u otro tipo), que desaparece cuando el usuario
+ingresa algún valor (booleano). -->
+
+    <!--  -->
+
+</body>
+
+</html>
+
+<!-- ---------------------------------------------------------- -->

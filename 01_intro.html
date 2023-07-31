@@ -35,7 +35,7 @@ etiqueta <body> dentro de la etiqueta <head>, o abrir una etiqueta
 </head>
 
 <body>
-    <p>Hola, esto es texto que se va a mostrar en la página web.</p>
+    <p>Texto que se va a mostrar en la página web.</p>
 </body>
 
 </html>
@@ -45,14 +45,15 @@ etiqueta <body> dentro de la etiqueta <head>, o abrir una etiqueta
 <!--                        ETIQUETA HTML                       -->
 
 <!-- En el ejemplo de estructura HTML anterior, se muestra primero la
-etiqueta DOCTIPE, y después la etiqueta <HTML>.
+etiqueta DOCTYPE, y después la etiqueta <HTML>.
     
-Dicha etiqueta establece parámetros generales para la página , por
+La etiqueta HTML establece parámetros generales para la página , por
 ejemplo, el atributo "lang", de "language". Cada país tiene su código
-de dominio (México: MX, Chile: CL, etc.), y si se quisiera especificar
-que el lenguaje que se utiliza en la página es particular de un país
-en específico, se debe poner como "[idioma]-[país]" (ej: ["es-MX"]).
-En el caso del ejemplo más arriba, "en" hace referencia al inglés.
+de dominio (México: MX, Chile: CL, Argentina: AR, etc.), y si se
+quisiera especificar que el lenguaje que se utiliza en la página es
+particular de un país en específico, se debe poner como
+"[idioma]-[país]" (ej: ["es-MX"]). En el caso del ejemplo anterior,
+"en" hace referencia al inglés (English).
 
 Debajo, una lista de todos los ccTLD (country code Top Level Domains):
 https://www.ionos.es/digitalguide/dominios/extensiones-de-dominio/cctld-la-lista-completa-de-dominios-por-pais/ -->
@@ -61,7 +62,7 @@ https://www.ionos.es/digitalguide/dominios/extensiones-de-dominio/cctld-la-lista
 
 <!-- Determina el tipo de lenguaje en el documento o estructura que
 sigue a la etiqueta. En este caso, el Doctype es HTML, que en la
-versión 5 se simplificó para aceptad todo tipo de código dentro del
+versión 5 se simplificó para aceptar todo tipo de código dentro del
 documento. -->
 
 <!--                         META-ETIQUETAS                       -->
@@ -84,18 +85,18 @@ estructura. -->
 
 <!-- La tercera:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">,
-es muy importante. "name", es la zona visible del navegador en donde se
+es MUY importante. "name", es la zona visible del navegador en donde se
 va a "renderizar" el contenido de la página, en este caso, "viewport".
 Esta es la etiqueta que le indica al navegador y a otros dispositivos,
 cómo adaptar la visualización del contenido.
 
-Viewport como tal tiene varios posibles valores (los cuales se pueden
+Viewport como tal, tiene varios posibles valores (los cuales se pueden
 ver tanto en la página MDN como en https://htmlreference.io/), que
 serán emparejados con el atributo "content". En este caso, los valores
 utilizados de manera estándar al crear la etiqueta, son:
 - width: indica el ancho de la página ("device-width").
 - initial-scale: indica el nivel de zoom al entrar a la página (1).
-Esta etiqueta es especialmente importante para lo que es el
+Esta etiqueta es especialmente importante para el
 "responsive design" en CSS. -->
 
 <!-- TÍTULO Y DESCRIPCIONES -->
@@ -116,7 +117,7 @@ los 165 caracteres, en la que se describa el contenido de la página.
 El título y la descripción son los que aparecen en los motores de
 búsqueda. Esta mal que en todas las secciones de una página web todas
 tengan el mismo título y la misma descripción, cada sección / cada
-documento HTML debe tener un título y una meta-descripción distintos.-->}
+documento HTML debe tener un título y una meta-descripción distintos.-->
 
 <!-- ---------------------------------------------------------- -->
 
@@ -204,8 +205,8 @@ https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#dates-and-times
 <!--                     ETIQUETAS DE SALTO                     -->
 
 <!-- <br> SALTO DE LÍNEA (PUNTO Y APARTE)
-Etiqueta sin etiqueta de cierre que marca un salto de línea, como
-apretar "enter" en un editor de texto.-->
+Etiqueta sin cierre que marca un salto de línea, como apretar
+"enter" en un editor de texto.-->
 <p>Esto es un párrafo nuevo.<br>Y esto es una nueva línea.</p>
 
 <!-- <hr> LÍNEA HORIZONTAL (VISUAL)
@@ -240,9 +241,10 @@ Esto es una lista con formato de ingreso:
 <!-- <code> FORMATO DE CÓDIGO
 El navegador mostrará el texto en formato de código, con la misma
 tipografía que la etiqueta anterior: -->
-<p>
-    <code>
-Esto es código JavaScript → var hello = () => console.log('Hello, user.'); hello();
+<p>Esto es código JavaScript ↓<br><br>
+    <code>const hello = () => console.log('Hello, user.');
+<br>hello();
+<br>// console output: 'Hello, user.';
 </code>
 </p>
 
@@ -272,7 +274,7 @@ Etiqueta que define un pie de página del un sitio web o de una sección.-->
 Etiqueta para denotar artículos dentro de la página o sección.
 Representa una sección autocontenida (es una sección en sí misma por
 su estructura, independiente del resto del contenido en el sitio). -->
-<article>ESTO ES UN ARTÍCULO></article>
+<article>ESTO ES UN ARTÍCULO</article>
 
 <!-- <section> SECCIÓN
 Etiqueta demarcadora de una nueva sección de contenido genérico en la
@@ -280,7 +282,7 @@ página. -->
 <section>ESTO ES UNA NUEVA SECCIÓN</section>
 
 <!-- <nav> REFERENCIA
-Etiqueta que se utiliza para representar una sección, que se linkea
+Etiqueta que se utiliza para representar una sección, que se enlaza
 con otras con otras páginas o secciones de la misma página. Puede
 utilizarse tanto como esquema de links de navegación como una
 botonera. -->
@@ -297,7 +299,7 @@ sección de "artículos relacionados" o "videos relacionados" en YT. -->
 <!-- <address> DIRECCIÓN
 Etiqueta que se utiliza para la representación semántica de una
 dirección física/real, o de información de contacto. -->
-<address>Dir. Barrio La Lomada De Pilar</address>
+<address>1234 Main St.</address>
 
 <!-- ---------------------------------------------------------- -->
 
